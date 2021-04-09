@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap-4.5.0-dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../bootstrap-3.4.1-dist/css/bootstrap.css" />
+    <title></title>
+    <style>
+        #er1 {
+            color:red;
+            font-size:1.2em;
+        }
+        #img{
+            width:300px;
+            height:200px;
+        }
+    </style>
+
+    <script>
+        function ktten() {
+            var regu = /^(\D*\s*)*&/;
+            var ten = document.getElementById("txtten").value;
+            if (regu.test(ten) == true) {
+                document.getElementById("er1").innerHTML = "";
+                return true;
+            }
+            else {
+                document.getElementById("er1").innerHTML = "ten khong hop le";
+                return false;
+            }
+        }
+     
+
+
+        var count = 1;
+        function xuli() {
+            var ten = document.getElementById("txtten").value;
+          var tenhoa=  document.getElementById("txttenhoa").value;
+          var giahoa=  document.getElementById("txtgia").value;
+
+            //ra ,check
+
+            var ra, check = '';
+            var n = document.getElementById("f").length;
+            for (let i = 0; i < n; i++)  
+                if (document.getElementById("f").elements[i].checked &&
+                    document.getElementById("f").elements[i].type == 'radio')
+                       ra = document.getElementById("f").elements[i].value;
+          
+
+            
+
+
+            for (let i = 0; i < n; i++) 
+                if (document.getElementById("f").elements[i].checked &&
+                    document.getElementById("f").elements[i].type == 'checkbox')
+            check += document.getElementById("f").elements[i].value + ',';
+
+            var hinh = document.getElementById("img").src ;
+            
+
+
+            var b = document.getElementById("tb");
+            var hang = b.insertRow(count);
+            var cot0 = hang.insertCell(0);
+            var cot1 = hang.insertCell(1);
+            var cot2 = hang.insertCell(2);
+            var cot3 = hang.insertCell(3);
+            var cot4 = hang.insertCell(4);
+            var cot5 = hang.insertCell(5);
+
+
+            cot0.innerHTML = ten;
+            cot1.innerHTML = tenhoa;
+            cot2.innerHTML = giahoa;
+            cot3.innerHTML = ra;
+            cot4.innerHTML = check;
+            cot5.innerHTML = hinh;
+
+            count++;
+        }
+
+        function select() {
+            var s = document.getElementById("sl").value;
+
+            var l = s.indexOf(";");
+            var tenhoa = s.substring(0, l);
+            var giahoa = s.substring(l + 1, 14);
+            var hinh = s.substring(15, s.length);
+
+            document.getElementById("txttenhoa").value = tenhoa;
+            document.getElementById("txtgia").value = giahoa;
+            document.getElementById("img").src = hinh;
+
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                <form id="f">
+
+
+                    <div>
+                        <label>
+                            Ten khach hang
+                        </label>
+                        <input type="text" placeholder="name" onblur="ktten()" id="txtten" class="form-control" />
+                        <span id="er1">(*)</span>
+                    </div>
+                    <div>
+                        <label>
+                            Ten khach hang
+                        </label>
+                        <select class="form-control" onchange="select()" id="sl">
+                            <option value="Hoa hong;22222;../hinh/hoa1.jpg">Hoa hong</option>
+                            <option value="Hoa lan;333333;../hinh/hoa2.jpg">Hoa Lan</option>
+                            <option value="Hoa cuc;444444;../hinh/hoa3.jpg">Hoa cuc</option>
+                            <option value="Hoa sen;555555;../hinh/hoa4.jpg">Hoa sen</option>
+                        </select>
+
+                    </div>
+
+                    <div>
+                        <label>
+                            Ten hoa
+                        </label>
+                        <input type="text" id="txttenhoa" readonly class="form-control" />
+
+                    </div>
+                    <div>
+                        <label>
+                            gia Hoa
+                        </label>
+                        <input type="text" id="txtgia" readonly class="form-control" />
+
+                    </div>
+                    <div>
+                        <label>
+                            hinh
+                        </label>
+                        <img src="" id="img"/>
+
+                    </div>
+                    <div>
+                        <label>
+                            Loai hoa
+                        </label>
+                        <input type="radio" value="hoa Nhua" name="1" />Hoa nhua
+                        <input type="radio" value="hoa that" name="1" />Hoa that
+                        <input type="radio" value="hoa giay" name="1" />Hoa giay
+
+                    </div>
+                    <div>
+                        <label>
+                            khuyen mai
+                        </label>
+                        <input type="checkbox" value="20%" />20%
+                        <input type="checkbox" value="50%" />50%
+                        <input type="checkbox" value="VIP" />VIP
+
+                    </div>
+                    <input type="button" value="them" onclick="xuli()" class="btn btn-info" />
+                </form>
+                <table class="table table-bordered" id="tb">
+                    <tr>
+                        <th>Ten khach hang</th>
+                        <th>Ten hoa</th>
+                        <th>Gia</th>
+                        <th>loai hoa</th>
+                        <th>Khuyen mai</th>
+                        <th>hinh</th>
+                    </tr>
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
