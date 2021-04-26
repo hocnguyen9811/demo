@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@android:style/Widget.Material.Light.RatingBar.Indicator"
+        android:layout_width="181dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="460dp"
+        android:background="#FFFFFF"
+        android:numStars="5"
+        android:progressTint="#FFFF00"
+        android:rating="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Điện Thoại Vsmart Joy 3 - Hàng chính hãng"
+        android:textColor="#070707"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="419dp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(Xem 828 đánh giá)"
+        android:textColor="#070707"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="460dp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="1.790.000 đ"
+        android:textColor="#070707"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="505dp" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/r"
+        tools:layout_editor_absoluteX="228dp"
+        tools:layout_editor_absoluteY="515dp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.790.000 đ"
+        android:textColor="#070707"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="505dp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Ở ĐÂU RẺ HƠN HOÀN TIỀN"
+        android:textColor="#F40000"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="562dp" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="370dp"
+        android:layout_height="43dp"
+        android:background="@drawable/vien1"
+        android:text="4 MÀU-CHỌN MÀU "
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="607dp" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="370dp"
+        android:layout_height="43dp"
+        android:background="@drawable/vien2"
+        android:fontFamily="@font/roboto_medium"
+        android:text="CHỌN MUA"
+        android:textColor="#F8F8F8"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="672dp" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="422dp"
+        android:layout_height="389dp"
+        app:srcCompat="@drawable/vs_red_a_1"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="29dp"
+        android:layout_height="27dp"
+        app:srcCompat="@drawable/t"
+        tools:layout_editor_absoluteX="275dp"
+        tools:layout_editor_absoluteY="562dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
